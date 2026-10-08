@@ -1,33 +1,38 @@
 // EVERYTHING client-specific lives in this file. Edit it, then swap images in /public/images.
 // Part 1: things that are the same in every language.
 // Part 2: the text, once per language (English + Arabic).
+//
+// Client: Abu Shanab Mens Salon
+// TODO markers = details I could not know. Fill them from their Instagram before sending.
 
 import type { Locale } from "@/lib/i18n";
 
 type Day = "Mon" | "Tue" | "Wed" | "Thu" | "Fri" | "Sat" | "Sun";
 
 export const site = {
-  url: "https://example.com", // the client's final domain (used for SEO and link previews)
+  url: "https://abu-shanab.vercel.app", 
   timezone: "Asia/Bahrain",
 
-  whatsapp: "97300000000", // digits only, with country code, no + or spaces
-  phone: "+973 0000 0000",
-  mapsUrl: "https://maps.google.com/?q=Manama+Bahrain",
-  instagram: "https://instagram.com/yourname", // "" to hide
+  whatsapp: "97334235657",
+  phone: "+973 3423 5657", 
+  mapsUrl: "https://www.google.com/maps/place/Abu+Shanab+Mens+Salon+Gudaibiya/@26.2281585,50.5883729,17z/data=!4m14!1m7!3m6!1s0x3e49af08bf6bacc9:0x64621ef8e7c5dbed!2sAbu+Shanab+Mens+Salon+Gudaibiya!8m2!3d26.2281585!4d50.5909478!16s%2Fg%2F11z5v72z4y!3m5!1s0x3e49af08bf6bacc9:0x64621ef8e7c5dbed!8m2!3d26.2281585!4d50.5909478!16s%2Fg%2F11z5v72z4y?entry=ttu&g_ep=EgoyMDI2MTAwNS4wIKXMDSoASAFQAw%3D%3D", 
+  instagram: "https://www.instagram.com/abushanabsalon.bh/", 
 
-  // Brand colors (any hex)
+  // Brand colors (any hex): black background, white accent
   colors: {
-    primary: "#0F3D3E", // hero, header, footer background
-    accent: "#C8963E", // main buttons
-    ink: "#1B1F1E", // body text
-    paper: "#F4F6F5", // page background
-    mist: "#DDE5E2", // borders and soft panels
+    primary: "#0A0A0A", // hero, header, footer background
+    accent: "#FFFFFF", // main buttons
+    ink: "#141414", // body text
+    paper: "#F4F4F4", // page background
+    mist: "#DADADA", // borders and soft panels
   },
 
   // Gallery photos: drop files in /public/images and list them here (alt text is in the language sections below)
+  // TODO: replace with real photos from their IG (or their logo + shop photos)
   gallery: ["/images/1.svg", "/images/2.svg", "/images/3.svg", "/images/4.svg", "/images/5.svg", "/images/6.svg"],
 
   // Opening hours, 24h format. open: null = closed that day. Day order here is the display order.
+  // TODO: replace with their real hours
   hours: [
     { day: "Sat", open: "10:00", close: "23:00" },
     { day: "Sun", open: "10:00", close: "23:00" },
@@ -68,10 +73,10 @@ export type Copy = {
 };
 
 const en: Copy = {
-  name: "Al Fanar Barbers",
-  tagline: "Classic cuts and hot-towel shaves in the heart of Manama.",
-  description: "Al Fanar Barbers in Manama, Bahrain. Haircuts, beard trims and hot-towel shaves. Book on WhatsApp.",
-  address: "Building 0, Road 0, Block 0, Manama, Bahrain",
+  name: "Abu Shanab Mens Salon",
+  tagline: "Sharp cuts, clean shaves and well-kept beards.",
+  description: "Abu Shanab Mens Salon in Bahrain. Haircuts, beard trims and shaves. Book on WhatsApp.",
+  address: "2161 Manama Qudaybiyah, 321", // TODO: full address (building, road, block, area)
   cta: "Book on WhatsApp",
   call: "Call",
   instagram: "Instagram",
@@ -79,7 +84,7 @@ const en: Copy = {
   switchLabel: "العربية",
   mapsLabel: "Open in Google Maps",
   sections: {
-    services: "Services and prices",
+    services: "Services",
     gallery: "Recent work",
     testimonials: "What customers say",
     hours: "Opening hours",
@@ -95,25 +100,23 @@ const en: Copy = {
   },
   time: { am: "AM", pm: "PM", to: "to", closed: "Closed" },
   days: { Sat: "Saturday", Sun: "Sunday", Mon: "Monday", Tue: "Tuesday", Wed: "Wednesday", Thu: "Thursday", Fri: "Friday" },
+  // TODO: confirm services from their IG and add real prices (price "" hides the price until then)
   services: [
-    { title: "Classic haircut", description: "Scissor or clipper cut, finished with a hot-towel neck wipe.", price: "BD 4" },
-    { title: "Beard trim and shape", description: "Defined lines, balanced length, and a clean fade into the cheeks.", price: "BD 3" },
-    { title: "Hot-towel shave", description: "Straight-razor shave with warm towels and aftershave balm.", price: "BD 5" },
-    { title: "Kids' cut", description: "Under 12. Patient barbers and a calm chair.", price: "BD 3" },
-    { title: "Haircut and beard", description: "The full routine in one visit.", price: "BD 6" },
+    { title: "Haircut", description: "Scissor or clipper cut, styled the way you like it.", price: "BD 1" },
+    { title: "Beard trim and shape", description: "Clean lines and a balanced shape.", price: "BD 1.5" },
+    { title: "Shave", description: "A clean, smooth shave.", price: "BD 1" },
+    { title: "Kids' cut", description: "Under 12. Patient barbers and a calm chair.", price: "BD 1" },
+    { title: "Haircut and beard", description: "The full routine in one visit.", price: "BD 2.5" },
   ],
-  galleryAlts: ["Fresh fade haircut", "Beard shaping", "Hot-towel shave", "Shop interior", "Barber chair", "Finished classic cut"],
-  testimonials: [
-    { quote: "Best fade I've had in Bahrain. I booked on WhatsApp and was in the chair in ten minutes.", name: "Hamad A." },
-    { quote: "Clean shop, on time, and they actually listen to what you ask for.", name: "Yousif K." },
-  ],
+  galleryAlts: ["Fresh haircut", "Beard shaping", "Clean shave", "Salon interior", "Barber chair", "Finished cut"],
+  testimonials: [], // hidden until we have real reviews
 };
 
 const ar: Copy = {
-  name: "صالون الفنار للحلاقة",
-  tagline: "قصات كلاسيكية وحلاقة بالمنشفة الساخنة في قلب المنامة.",
-  description: "صالون الفنار للحلاقة في المنامة، البحرين. قص الشعر، تشذيب اللحية، وحلاقة بالمنشفة الساخنة. احجز عبر واتساب.",
-  address: "مبنى 0، طريق 0، مجمّع 0، المنامة، البحرين",
+  name: "صالون أبو شنب للرجال", // TODO: match the exact Arabic spelling they use on IG
+  tagline: "قصّات أنيقة وحلاقة نظيفة وعناية باللحية.",
+  description: "صالون أبو شنب للرجال في البحرين. قص الشعر، تشذيب اللحية، والحلاقة. احجز عبر واتساب.",
+  address: "البحرين", // TODO: العنوان الكامل
   cta: "احجز عبر واتساب",
   call: "اتصل",
   instagram: "إنستغرام",
@@ -121,7 +124,7 @@ const ar: Copy = {
   switchLabel: "English",
   mapsLabel: "افتح في خرائط Google",
   sections: {
-    services: "الخدمات والأسعار",
+    services: "الخدمات",
     gallery: "أحدث أعمالنا",
     testimonials: "آراء عملائنا",
     hours: "ساعات العمل",
@@ -138,17 +141,14 @@ const ar: Copy = {
   time: { am: "ص", pm: "م", to: "إلى", closed: "مغلق" },
   days: { Sat: "السبت", Sun: "الأحد", Mon: "الاثنين", Tue: "الثلاثاء", Wed: "الأربعاء", Thu: "الخميس", Fri: "الجمعة" },
   services: [
-    { title: "قص الشعر الكلاسيكي", description: "قصّ بالمقص أو الماكينة، مع مسح الرقبة بالمنشفة الساخنة.", price: "4 د.ب" },
-    { title: "تحديد شكل اللحية وتنسيقها", description: "خطوط واضحة، طول متوازن، وتدرّج ناعم عند الخدّين.", price: "3 د.ب" },
-    { title: "حلاقة بالمنشفة الساخنة", description: "حلاقة بالشفرة المستقيمة مع مناشف دافئة ومرطب بعد الحلاقة.", price: "5 د.ب" },
-    { title: "قص الأطفال", description: "لمن هم دون 12 سنة. حلاقون صبورون وكرسي هادئ.", price: "3 د.ب" },
-    { title: "قص الشعر مع اللحية", description: "الخدمة الكاملة في زيارة واحدة.", price: "6 د.ب" },
+    { title: "قص الشعر", description: "قصّ بالمقص أو الماكينة، وتسريحة على ذوقك.", price: "" },
+    { title: "تحديد شكل اللحية وتنسيقها", description: "خطوط واضحة وشكل متوازن.", price: "" },
+    { title: "حلاقة", description: "حلاقة نظيفة وناعمة.", price: "" },
+    { title: "قص الأطفال", description: "لمن هم دون 12 سنة. حلاقون صبورون وكرسي هادئ.", price: "" },
+    { title: "قص الشعر مع اللحية", description: "الخدمة الكاملة في زيارة واحدة.", price: "" },
   ],
-  galleryAlts: ["تدرّج جديد", "تشكيل اللحية", "حلاقة بالمنشفة الساخنة", "داخل الصالون", "كرسي الحلاقة", "قص كلاسيكي منتهي"],
-  testimonials: [
-    { quote: "أفضل تدرّج حصلت عليه في البحرين. حجزت عبر واتساب وجلست على الكرسي خلال عشر دقائق.", name: "حمد ع." },
-    { quote: "الصالون نظيف، والالتزام بالمواعيد، وهم يسمعون طلبك فعلاً.", name: "يوسف ك." },
-  ],
+  galleryAlts: ["قصة جديدة", "تشكيل اللحية", "حلاقة نظيفة", "داخل الصالون", "كرسي الحلاقة", "قصة منتهية"],
+  testimonials: [],
 };
 
 export const copy: Record<Locale, Copy> = { en, ar };
