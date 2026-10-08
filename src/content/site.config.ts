@@ -29,7 +29,7 @@ export const site = {
 
   // Gallery photos: drop files in /public/images and list them here (alt text is in the language sections below)
   // TODO: replace with real photos from their IG (or their logo + shop photos)
-  gallery: ["/images/1.svg", "/images/2.svg", "/images/3.svg", "/images/4.svg", "/images/5.svg", "/images/6.svg"],
+  gallery: ["/images/1.png", "/images/2.png", "/images/3.png", "/images/4.svg", "/images/5.svg", "/images/6.svg"],
 
   // Opening hours, 24h format. open: null = closed that day. Day order here is the display order.
   // TODO: replace with their real hours
@@ -79,7 +79,7 @@ const en: Copy = {
   address: "2161 Manama Qudaybiyah, 321", // TODO: full address (building, road, block, area)
   cta: "Book on WhatsApp",
   call: "Call",
-  instagram: "Instagram",
+  instagram: "@abushanabsalon.bh",
   whatsappMessage: "Hi! I'd like to book an appointment.",
   switchLabel: "العربية",
   mapsLabel: "Open in Google Maps",
@@ -116,10 +116,10 @@ const ar: Copy = {
   name: "صالون أبو شنب للرجال", // TODO: match the exact Arabic spelling they use on IG
   tagline: "قصّات أنيقة وحلاقة نظيفة وعناية باللحية.",
   description: "صالون أبو شنب للرجال في البحرين. قص الشعر، تشذيب اللحية، والحلاقة. احجز عبر واتساب.",
-  address: "البحرين", // TODO: العنوان الكامل
+  address: "البحرين", 
   cta: "احجز عبر واتساب",
   call: "اتصل",
-  instagram: "إنستغرام",
+  instagram: "@abushanabsalon.bh",
   whatsappMessage: "مرحباً! أرغب بحجز موعد.",
   switchLabel: "English",
   mapsLabel: "افتح في خرائط Google",

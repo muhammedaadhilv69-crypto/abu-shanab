@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       siteName: t.name,
       locale: lang === "ar" ? "ar_BH" : "en_US",
       type: "website",
-      images: [{ url: "/images/1.svg" }], // replace with a 1200x630 jpg/png for WhatsApp previews
+      images: [{ url: "/images/1.png" }], // replace with a 1200x630 jpg/png for WhatsApp previews
     },
   };
 }

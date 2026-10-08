@@ -11,7 +11,9 @@ export default function Contact({ t }: { t: Copy }) {
         <SectionTitle>{t.sections.contact}</SectionTitle>
         <p className="mb-6 max-w-[40ch] opacity-90">{t.sections.contactText}</p>
         <div className="flex flex-wrap gap-3">
-          <ButtonLink href={whatsappLink(t)}>{t.cta}</ButtonLink>
+          <ButtonLink href={whatsappLink(t)} className="bg-accent text-accent-foreground hover:bg-accent/90">
+            {t.cta}
+          </ButtonLink>
           <ButtonLink href={telLink} variant="ghost">
             {t.call} <bdi dir="ltr" className="ms-2">{site.phone}</bdi>
           </ButtonLink>

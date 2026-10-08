@@ -15,8 +15,10 @@ export default function Hero({ t }: { t: Copy }) {
         </h1>
         <p className="max-w-[36ch] text-[clamp(1.1rem,2.5vw,1.4rem)] opacity-90">{t.tagline}</p>
         <div className="flex flex-wrap gap-3">
-          <ButtonLink href={whatsappLink(t)}>{t.cta}</ButtonLink>
-          <ButtonLink href={telLink} variant="ghost">
+          <ButtonLink href={whatsappLink(t)} className="bg-accent text-accent-foreground hover:bg-accent/90">
+            {t.cta}
+          </ButtonLink>
+          <ButtonLink href={telLink} variant="ghost" >
             {t.call} <bdi dir="ltr" className="ms-2">{site.phone}</bdi>
           </ButtonLink>
         </div>

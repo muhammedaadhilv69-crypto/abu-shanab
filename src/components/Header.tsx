@@ -14,7 +14,7 @@ export default function Header({ lang, t }: { lang: Locale; t: Copy }) {
         </a>
         <div className="flex items-center gap-2">
           <LanguageSwitch lang={lang} label={t.switchLabel} />
-          <ButtonLink href={whatsappLink(t)} size="sm" className="hidden sm:inline-flex">
+          <ButtonLink href={whatsappLink(t)} size="sm" className="hidden sm:inline-flex bg-accent text-accent-foreground hover:bg-accent/90">
             {t.cta}
           </ButtonLink>
         </div>
