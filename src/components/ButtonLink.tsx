@@ -27,7 +27,7 @@ export default function ButtonLink({ href, children, variant = "solid", size = "
       href={href}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className={cn(
-        "inline-flex items-center justify-center rounded-lg border-2 font-bold no-underline",
+        "inline-flex items-center justify-center rounded-lg border-2 font-bold p-2 no-underline",
         "transition-transform hover:-translate-y-0.5 motion-reduce:transition-none motion-reduce:hover:transform-none",
         variants[variant],
         sizes[size],
